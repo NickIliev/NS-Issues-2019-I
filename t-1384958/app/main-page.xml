@@ -6,7 +6,7 @@
         </ActionBar>
     </Page.actionBar>
 
-    <StackLayout class="p-20">
-        <ListPicker class="list-picker" items="{{ items }}" selectedIndex="2"></ListPicker>
+    <StackLayout width="100%" >
+        <ListPicker class="list-picker" fontSize="40" items="{{ items }}" selectedIndex="2" loaded="onPickerLoaded"></ListPicker>
     </StackLayout>
 </Page>
