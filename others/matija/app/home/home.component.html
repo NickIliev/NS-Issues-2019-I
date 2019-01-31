@@ -1,6 +1,47 @@
 <ActionBar title="Example" class="action-bar">
 </ActionBar>
+
 <GridLayout rows="*,*" backgroundColor="lightgray" width="100%">
+
+    <GridLayout row="0" rows="*" columns="*" backgroundColor="lightgray">
+        <Pager [items]="items" #pager [selectedIndex]="currentPagerIndex" (selectedIndexChange)="onIndexChanged($event)" height="90%">
+            <ng-template let-i="index" let-item="item">
+                <GridLayout rows="auto, *, auto" columns="* *">
+                    <Label row="0" col="0" [text]="item.myTitle" horizontalAlignment="center" ></Label>
+
+                    <RadCartesianChart row="1" col="0" colspan="2" >
+                        <CategoricalAxis tkCartesianHorizontalAxis></CategoricalAxis>
+                        <LinearAxis tkCartesianVerticalAxis></LinearAxis>
+                        <BarSeries tkCartesianSeries paletteMode="Item" [items]="item.source"
+                            categoryProperty="Country" valueProperty="Amount"></BarSeries>
+                        <Palette tkCartesianPalette [items]="palleteArray">
+                            <PaletteEntry tkCartesianPaletteEntry fillColor="#4466ff" strokeColor="#e1e1e1"></PaletteEntry>
+                            <PaletteEntry tkCartesianPaletteEntry fillColor="#0099ff" strokeColor="#e1e1e1"></PaletteEntry>
+                            <PaletteEntry tkCartesianPaletteEntry fillColor="#0099ff" strokeColor="#e1e1e1"></PaletteEntry>
+                            <PaletteEntry tkCartesianPaletteEntry fillColor="#8899aa" strokeColor="#e1e1e1"></PaletteEntry>
+                            <PaletteEntry tkCartesianPaletteEntry fillColor="#4466ff" strokeColor="#e1e1e1"></PaletteEntry>
+                            <PaletteEntry tkCartesianPaletteEntry fillColor="#0099ff" strokeColor="#e1e1e1"></PaletteEntry>
+                            <PaletteEntry tkCartesianPaletteEntry fillColor="#8899aa" strokeColor="#e1e1e1"></PaletteEntry>
+                        </Palette>
+                    </RadCartesianChart>
+
+                    <label row="2" col="0" width="200" text="Start time: 7.1.2019."></label>
+                    <label row="2" col="1" width="200" text="End time: 27.1.2019."></label>
+                </GridLayout>
+            </ng-template>
+        </Pager>
+    </GridLayout>
+
+
+    <GridLayout row="1">
+        <RadCalendar [eventSource]="calendarEvents" eventsViewMode="Inline" selectionMode="Single" viewMode="Month"
+            transitionMode="Slide"></RadCalendar>
+    </GridLayout>
+
+</GridLayout>
+
+
+<!-- <GridLayout rows="*,*" backgroundColor="lightgray" width="100%">
     <GridLayout row="0" rows="auto,auto,*,auto,auto" columns="auto,auto, *">
 
         <label col="0" text="Task1" horizontalAlignment="center"></label>
@@ -35,11 +76,4 @@
         <label row="3" col="0" width="200" text="Start time: 7.1.2019."></label>
         <label row="3" col="1" width="200" text="End time: 27.1.2019."></label>
     </GridLayout>
-
-
-    <GridLayout row="1">
-        <RadCalendar [eventSource]="calendarEvents" eventsViewMode="Inline"
-            selectionMode="Single" viewMode="Month" transitionMode="Slide"></RadCalendar>
-
-    </GridLayout>
-</GridLayout>
+</GridLayout> -->

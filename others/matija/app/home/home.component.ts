@@ -9,6 +9,9 @@ import { Color } from "color";
     styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+    items: Array<any> = [];
+    currentPagerIndex: number = 1;
+
     categoricalSource: { Country: string, Amount: number }[] = [
         { Country: "7", Amount: 3 },
         { Country: "8", Amount: 2 },
@@ -16,13 +19,63 @@ export class HomeComponent implements OnInit {
         { Country: "10", Amount: 8, },
         { Country: "11", Amount: 5, },
         { Country: "12", Amount: 0, },
-         { Country: "13", Amount: 9, }
+        { Country: "13", Amount: 9, }
+    ];
+
+    categoricalSourceNew: { Country: string, Amount: number }[] = [
+        { Country: "111", Amount: 4 },
+        { Country: "118", Amount: 0 },
+        { Country: "220", Amount: 7 },
+        { Country: "152", Amount: 2, },
+        { Country: "77", Amount: 1, },
+        { Country: "66", Amount: 9, },
+        { Country: "67", Amount: 9, },
+        { Country: "152", Amount: 2, },
+        { Country: "25", Amount: 1, },
+        { Country: "33", Amount: 4, },
+        { Country: "88", Amount: 9, }
+    ];
+
+
+    categoricalSourceThird: { Country: string, Amount: number }[] = [
+        { Country: "111", Amount: 2 },
+        { Country: "118", Amount: 6 },
+        { Country: "220", Amount: 6 },
+        { Country: "152", Amount: 6, },
     ];
 
     calendarEvents = [];
 
     constructor() {
         // Creating dummy events
+        this.calendarEvents = this.createDummyEvents();
+
+        this.items = [{ 
+            myTitle: "First Slide", 
+            source: this.categoricalSource 
+        },{ 
+            myTitle: "Second Slide", 
+            source: this.categoricalSourceNew 
+        },{ 
+            myTitle: "Third Slide", 
+            source: this.categoricalSourceThird 
+        },{ 
+            myTitle: "Forth Slide", 
+            source: this.categoricalSourceNew 
+        },{ 
+            myTitle: "Fifth Slide", 
+            source: this.categoricalSource 
+        }];
+    }
+
+    ngOnInit(): void {
+    }
+
+    onIndexChanged(args) {
+        // console.log(args);    
+    }
+
+    createDummyEvents() {
         let events = [];
         let now = new Date();
         let startDate;
@@ -38,13 +91,7 @@ export class HomeComponent implements OnInit {
                 events.push(event);
             }
         }
-        this.calendarEvents = events;
+
+        return events;
     }
-
-    ngOnInit(): void {
-    }
-
-
-
- 
 }

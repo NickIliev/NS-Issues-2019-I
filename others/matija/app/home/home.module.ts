@@ -12,6 +12,8 @@ import { NativeScriptFormsModule } from "nativescript-angular/forms";
 import { HomeRoutingModule } from "./home-routing.module";
 import { HomeComponent } from "./home.component";
 
+import { PagerModule } from "nativescript-pager/angular";
+
 @NgModule({
     imports: [
         NativeScriptUISideDrawerModule,
@@ -23,7 +25,8 @@ import { HomeComponent } from "./home.component";
         NativeScriptUIGaugeModule,
         NativeScriptCommonModule,
         HomeRoutingModule,
-        NativeScriptFormsModule
+        NativeScriptFormsModule,
+        PagerModule
     ],
     declarations: [
         HomeComponent
