@@ -60,7 +60,7 @@ import * as http from "http";
 // this is actually a short import for `tns-core-modules/http`
 ```
 
-These are the reasons why its time to say goodbye to the short imports. With NativeScript 5.x.x these are now deprecated.
+These are the reasons why its time to say goodbye to the short imports. With NativeScript 5.2 these are now deprecated.
 
 _Q: Should I take any steps?_
 
