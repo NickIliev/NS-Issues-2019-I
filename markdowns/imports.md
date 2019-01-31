@@ -22,7 +22,7 @@ exports.navigatingTo = function(args) {
 }
 ```
 
-## Deprecation of the short imports in NativeScript 5
+## Deprecation of the short imports in NativeScript 5.2
 
 The last few versions of NativeScript brought a ton of new features including the Preview app, extended Webpack support, HMR, cloud builds via CLI and so on. The complexity of some features and the concept idea that Webpack should become out-of-the-box for all NativeScript applications required for the team to deprecate the **short imports**. 
 
