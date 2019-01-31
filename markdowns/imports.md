@@ -66,7 +66,7 @@ _Q: Should I take any steps?_
 
 A: If you are an application developer, make sure to migrate all short imports to full imports. If you own a NativeScript plugin, you will have to migrate the plugin imports from short to the full syntax as well.
 
-The NativeScript teams have already migrated the plugin under the NativeScript organization to use full imports. The next step is to iterate through the community plugins and to inform the plugin authors about the needed change.
+The NativeScript teams have already migrated the plugins under the NativeScript organization to use full imports. The next step is to iterate through the community plugins and to inform the plugin authors about the needed change.
 
 
 
