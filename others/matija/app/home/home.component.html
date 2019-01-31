@@ -1,0 +1,45 @@
+<ActionBar title="Example" class="action-bar">
+</ActionBar>
+<GridLayout rows="*,*" backgroundColor="lightgray" width="100%">
+    <GridLayout row="0" rows="auto,auto,*,auto,auto" columns="auto,auto, *">
+
+        <label col="0" text="Task1" horizontalAlignment="center"></label>
+        <label col="1" text="Total time:" horizontalAlignment="center"></label>
+        <label col="2" text="03:00" horizontalAlignment="center"></label>
+        <label row="1" colspan="2" text="7.1.2019 - 12.1.2019."
+            horizontalAlignment="center"></label>
+
+        <RadCartesianChart col="0" colspan="3" row="2">
+            <CategoricalAxis tkCartesianHorizontalAxis></CategoricalAxis>
+            <LinearAxis tkCartesianVerticalAxis></LinearAxis>
+            <BarSeries tkCartesianSeries paletteMode="Item" [items]="categoricalSource"
+                categoryProperty="Country" valueProperty="Amount"></BarSeries>
+            <Palette tkCartesianPalette [items]="palleteArray">
+                <PaletteEntry tkCartesianPaletteEntry fillColor="#4466ff"
+                    strokeColor="#e1e1e1"></PaletteEntry>
+                <PaletteEntry tkCartesianPaletteEntry fillColor="#0099ff"
+                    strokeColor="#e1e1e1"></PaletteEntry>
+                <PaletteEntry tkCartesianPaletteEntry fillColor="#0099ff"
+                    strokeColor="#e1e1e1"></PaletteEntry>
+                <PaletteEntry tkCartesianPaletteEntry fillColor="#8899aa"
+                    strokeColor="#e1e1e1"></PaletteEntry>
+                <PaletteEntry tkCartesianPaletteEntry fillColor="#4466ff"
+                    strokeColor="#e1e1e1"></PaletteEntry>
+                <PaletteEntry tkCartesianPaletteEntry fillColor="#0099ff"
+                    strokeColor="#e1e1e1"></PaletteEntry>
+                <PaletteEntry tkCartesianPaletteEntry fillColor="#8899aa"
+                    strokeColor="#e1e1e1"></PaletteEntry>
+            </Palette>
+        </RadCartesianChart>
+
+        <label row="3" col="0" width="200" text="Start time: 7.1.2019."></label>
+        <label row="3" col="1" width="200" text="End time: 27.1.2019."></label>
+    </GridLayout>
+
+
+    <GridLayout row="1">
+        <RadCalendar [eventSource]="calendarEvents" eventsViewMode="Inline"
+            selectionMode="Single" viewMode="Month" transitionMode="Slide"></RadCalendar>
+
+    </GridLayout>
+</GridLayout>
