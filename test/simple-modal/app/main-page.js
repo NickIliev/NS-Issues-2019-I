@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var modalViewModulets = "./modal-view-page";
+function openModal(args) {
+    var mainView = args.object;
+    var context = { username: "test_username", password: "test" };
+    var fullscreen = false;
+    mainView.showModal(modalViewModulets, context, function (username, password) {
+        // Receive data from the modal view. e.g. username & password
+        console.log("Username: " + username + " : Password: " + password);
+    }, fullscreen);
+}
+exports.openModal = openModal;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibWFpbi1wYWdlLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibWFpbi1wYWdlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBRUEsSUFBTSxpQkFBaUIsR0FBRyxtQkFBbUIsQ0FBQztBQUU5QyxTQUFnQixTQUFTLENBQUMsSUFBSTtJQUMxQixJQUFNLFFBQVEsR0FBbUIsSUFBSSxDQUFDLE1BQU0sQ0FBQztJQUM3QyxJQUFNLE9BQU8sR0FBRyxFQUFFLFFBQVEsRUFBRSxlQUFlLEVBQUUsUUFBUSxFQUFFLE1BQU0sRUFBRSxDQUFDO0lBQ2hFLElBQU0sVUFBVSxHQUFHLEtBQUssQ0FBQztJQUV6QixRQUFRLENBQUMsU0FBUyxDQUFDLGlCQUFpQixFQUFFLE9BQU8sRUFBRSxVQUFDLFFBQVEsRUFBRSxRQUFRO1FBQzlELDZEQUE2RDtRQUM3RCxPQUFPLENBQUMsR0FBRyxDQUFDLGVBQWEsUUFBUSxxQkFBZ0IsUUFBVSxDQUFDLENBQUM7SUFDakUsQ0FBQyxFQUFFLFVBQVUsQ0FBQyxDQUFDO0FBQ25CLENBQUM7QUFURCw4QkFTQyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IEJ1dHRvbiB9IGZyb20gXCJ0bnMtY29yZS1tb2R1bGVzL3VpL2J1dHRvblwiO1xuXG5jb25zdCBtb2RhbFZpZXdNb2R1bGV0cyA9IFwiLi9tb2RhbC12aWV3LXBhZ2VcIjtcblxuZXhwb3J0IGZ1bmN0aW9uIG9wZW5Nb2RhbChhcmdzKSB7XG4gICAgY29uc3QgbWFpblZpZXc6IEJ1dHRvbiA9IDxCdXR0b24+YXJncy5vYmplY3Q7XG4gICAgY29uc3QgY29udGV4dCA9IHsgdXNlcm5hbWU6IFwidGVzdF91c2VybmFtZVwiLCBwYXNzd29yZDogXCJ0ZXN0XCIgfTtcbiAgICBjb25zdCBmdWxsc2NyZWVuID0gZmFsc2U7XG5cbiAgICBtYWluVmlldy5zaG93TW9kYWwobW9kYWxWaWV3TW9kdWxldHMsIGNvbnRleHQsICh1c2VybmFtZSwgcGFzc3dvcmQpID0+IHtcbiAgICAgICAgLy8gUmVjZWl2ZSBkYXRhIGZyb20gdGhlIG1vZGFsIHZpZXcuIGUuZy4gdXNlcm5hbWUgJiBwYXNzd29yZFxuICAgICAgICBjb25zb2xlLmxvZyhgVXNlcm5hbWU6ICR7dXNlcm5hbWV9IDogUGFzc3dvcmQ6ICR7cGFzc3dvcmR9YCk7XG4gICAgfSwgZnVsbHNjcmVlbik7XG59Il19

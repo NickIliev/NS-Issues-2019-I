@@ -1,0 +1,9 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd">
+    <Page.actionBar>
+        <ActionBar title="Getting Started"/>
+    </Page.actionBar>
+
+    <GridLayout rows="auto, *">
+        <Button text="Open modal" tap="openModal" textWrap="true" class="btn btn-primary"/>
+    </GridLayout>
+</Page>

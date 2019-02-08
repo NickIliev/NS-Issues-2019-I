@@ -6,7 +6,7 @@ export class HelloWorldModel extends Observable {
     constructor() {
         super();
 
-        this.items = ["ONE", "TWO", "THREE", "FOUR", "FIVE"];
+        this.items = ["One", "Two", "Three", "Four", "Fibe"];
     }
 
 }
