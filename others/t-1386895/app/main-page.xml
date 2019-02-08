@@ -1,0 +1,41 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" 
+        xmlns:pager="nativescript-pager" 
+        navigatingTo="navigatingTo" class="page">
+
+    <Page.actionBar>
+        <ActionBar title="My App" icon="" class="action-bar">
+        </ActionBar>
+    </Page.actionBar>
+
+<GridLayout rows="*" columns="*">
+    <!-- When the pagers are nested within a ScrollView, 
+        it seems that you will need to wrap the scrollview in a parent container with some size
+        For example here the parent is taking all the vailable space with rows="*" columns="*
+    -->
+    <ScrollView orientation="vertical" height="100%">
+        <GridLayout rows="300, 200, 300" columns="*">
+            <pager:Pager items="{{ items }}" row="0" id="pager" pagesCount="10" showNativePageIndicator="false" backgroundColor="lightsteelblue">
+                <pager:Pager.itemTemplate>
+                    <GridLayout rows="auto, *" columns="*" backgroundColor="red">
+                        <Label text="{{ $value }}" textAlignment="center" color="white" fontSize="24"/>
+                        <Image row="1" src="res://logo"/>
+                    </GridLayout>
+                </pager:Pager.itemTemplate>
+            </pager:Pager>
+
+            <StackLayout row="1" backgroundColor="lightgray">
+                <Label text="some other content" textWrap="true" />
+            </StackLayout>
+
+            <pager:Pager items="{{ items }}" row="2" id="pager2"  pagesCount="10" showNativePageIndicator="true" backgroundColor="lightsteelblue">
+                <pager:Pager.itemTemplate>
+                    <GridLayout rows="auto, *" columns="*" backgroundColor="blue">
+                        <Label text="{{ $value }}" textAlignment="center" color="white" fontSize="24"/>
+                        <Image row="1" src="res://icon"/>
+                    </GridLayout>
+                </pager:Pager.itemTemplate>
+            </pager:Pager>        
+        </GridLayout>
+    </ScrollView>
+</GridLayout>
+</Page>
