@@ -1,0 +1,24 @@
+
+<ActionBar title="MapBox demo" class="action-bar">
+</ActionBar>
+
+<GridLayout rows="auto *" columns="*">
+    <Label row="0" text="MAPBOX DSEMO" textWrap="true" ></Label>
+    
+    <Mapbox
+          row="1"
+          accessToken="sk.eyJ1IjoiZGFya3l0byIsImEiOiJjanMzNm1iNWcwdDl0NGFrdnY0aXd1N29vIn0.0qJcU3OZC3hLinkRflhcfA"
+          mapStyle="traffic_day"
+          latitude="51.9280572"
+          longitude="4.4201952"
+          zoomLevel="4"
+          delay="450"
+          showUserLocation="true"
+          hideCompass="false"
+          disableZoom="false"
+          disableRotation="false"
+          disableScroll="false"
+          disableTilt="false"
+          (mapReady)="onMapReady($event)">
+      </Mapbox> 
+</GridLayout>
