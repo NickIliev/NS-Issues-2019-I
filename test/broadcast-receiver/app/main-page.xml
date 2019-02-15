@@ -1,0 +1,10 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" >
+
+    <GridLayout rows="*, *, auto, auto" columns="*">
+        <Label row="0" text="{{ info }}" textWrap="true" fontSize="14"></Label>
+        <Label row="1" text="{{ batteryLife + ' percent' }}" textWrap="true" fontSize="24"></Label>
+        <Button row="2" text="startReceiver" tap="startReceiver" />
+        <Button row="3" text="stopReceiver" tap="stopReceiver" />
+    </GridLayout>
+
+</Page>
