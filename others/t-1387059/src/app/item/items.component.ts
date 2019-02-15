@@ -16,11 +16,11 @@ export class ItemsComponent implements OnInit {
         // The user device MUST have Google Maps App installed to open the below link in the APP
         // If the app is not instaled the link will be opened in the default browser
 
-        openUrl("https://www.google.com/maps/search/?api=1&query=centurylink+field");
-        
+        openUrl("http://maps.apple.com/?saddr=Cupertino&daddr=San+Francisco");
+
         // another example
         // https://www.google.com/maps/search/?api=1&query=47.5951518,-122.3316393&query_place_id=ChIJKxjxuaNqkFQR3CK6O1HNNqY
 
-        // all about Google Schemes here: https://www.google.com/maps/search/?api=1&query=47.5951518,-122.3316393&query_place_id=ChIJKxjxuaNqkFQR3CK6O1HNNqY
+        // all about Google Maps Schemes here: https://www.google.com/maps/search/?api=1&query=47.5951518,-122.3316393&query_place_id=ChIJKxjxuaNqkFQR3CK6O1HNNqY
     }
 }
