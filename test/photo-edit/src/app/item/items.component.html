@@ -2,7 +2,9 @@
 <ActionBar title="My App" class="action-bar">
 </ActionBar>
 
-<GridLayout rows="auto, *" columns="*" class="page">
-    <Button row="0" text="editPhoto" (tap)="editPhoto()"></Button>
-    <Image row="1" (loaded)="onImageLoaded($event)" [src]="imageSrc"></Image>
+<GridLayout rows="auto auto auto *" columns="*" class="page">
+    <TextField row="0" hint="enter text" text=""></TextField>
+    <Button row="1" text="editPhoto" (tap)="editPhoto()"></Button>
+    <Button row="2" text="takePhoto" (tap)="takePhoto()" ></Button>
+    <Image row="3" (loaded)="onImageLoaded($event)" [src]="imageSrc"></Image>
 </GridLayout>
