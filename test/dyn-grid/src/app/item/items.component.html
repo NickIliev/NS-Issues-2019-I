@@ -4,6 +4,7 @@
 <ScrollView>
 
     <StackLayout>
+        <!-- The initial content will be displaced once we change the size of any element that is located somewhere outside the visible area (use the scroll)-->
         <Label text="TITLE" textWrap="true"></Label>
         <Label text="SOME OTHER CONTENT" textWrap="true"></Label>
         <Image src="res://logo" height="300"></Image>
@@ -41,19 +42,16 @@
             <Button row="0" text="Change w/ TextWrap" (tap)="onChangeWrap()"></Button>
             <Label row="1" [text]="content" [textWrap]="isWrapped" color="black"></Label>
         </GridLayout>
-
         <!-- Tewst with ngIf --->
         <GridLayout rows="auto, auto" columns="*" backgroundColor="lightgray">
             <Button row="0" text="Change w/ ngIf" (tap)="onChangeNgIf()"></Button>
             <Label *ngIf="isIffed" row="1" [text]="content" textWrap="true"></Label>
         </GridLayout>
-
         <!-- Tewst with visibilty --->
         <GridLayout rows="auto, auto" columns="*" backgroundColor="lightgray">
             <Button row="0" text="Change w/ VISIBILITY" (tap)="onChangeVisibility()"></Button>
             <Label [visibility]="isVisible ? 'visible' : 'collapsed'" row="1" [text]="content" textWrap="true"></Label>
         </GridLayout>
-
         <!-- Test with TextWrap -->
         <GridLayout rows="auto, auto" backgroundColor="lightgray">
             <Button row="0" text="Change w/ TextWrap" (tap)="onChangeWrap()"></Button>
@@ -65,44 +63,36 @@
             <Button row="0" text="Change w/ ngIf" (tap)="onChangeNgIf()"></Button>
             <Label *ngIf="isIffed" row="1" [text]="content" textWrap="true"></Label>
         </GridLayout>
-
         <!-- Tewst with visibilty --->
         <GridLayout rows="auto, auto" columns="*" backgroundColor="lightgray">
             <Button row="0" text="Change w/ VISIBILITY" (tap)="onChangeVisibility()"></Button>
             <Label [visibility]="isVisible ? 'visible' : 'collapsed'" row="1" [text]="content" textWrap="true"></Label>
         </GridLayout>
-
         <!-- Test with TextWrap -->
         <GridLayout rows="auto, auto" backgroundColor="lightgray">
             <Button row="0" text="Change w/ TextWrap" (tap)="onChangeWrap()"></Button>
             <Label row="1" [text]="content" [textWrap]="isWrapped" color="black"></Label>
         </GridLayout>
-
         <!-- Tewst with ngIf --->
         <GridLayout rows="auto, auto" columns="*" backgroundColor="lightgray">
             <Button row="0" text="Change w/ ngIf" (tap)="onChangeNgIf()"></Button>
             <Label *ngIf="isIffed" row="1" [text]="content" textWrap="true"></Label>
         </GridLayout>
-
         <!-- Tewst with visibilty --->
         <GridLayout rows="auto, auto" columns="*" backgroundColor="lightgray">
             <Button row="0" text="Change w/ VISIBILITY" (tap)="onChangeVisibility()"></Button>
             <Label [visibility]="isVisible ? 'visible' : 'collapsed'" row="1" [text]="content" textWrap="true"></Label>
         </GridLayout>
-
-
         <!-- Test with TextWrap -->
         <GridLayout rows="auto, auto" backgroundColor="lightgray">
             <Button row="0" text="Change w/ TextWrap" (tap)="onChangeWrap()"></Button>
             <Label row="1" [text]="content" [textWrap]="isWrapped" color="black"></Label>
         </GridLayout>
-
         <!-- Tewst with ngIf --->
         <GridLayout rows="auto, auto" columns="*" backgroundColor="lightgray">
             <Button row="0" text="Change w/ ngIf" (tap)="onChangeNgIf()"></Button>
             <Label *ngIf="isIffed" row="1" [text]="content" textWrap="true"></Label>
         </GridLayout>
-
         <!-- Tewst with visibilty --->
         <GridLayout rows="auto, auto" columns="*" backgroundColor="lightgray">
             <Button row="0" text="Change w/ VISIBILITY" (tap)="onChangeVisibility()"></Button>
