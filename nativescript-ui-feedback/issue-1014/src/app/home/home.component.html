@@ -1,0 +1,19 @@
+<ActionBar class="action-bar">
+    <NavigationButton ios:visibility="collapsed" icon="res://menu" (tap)="onDrawerButtonTap()"></NavigationButton>
+    <ActionItem icon="res://navigation/menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()"
+        ios.position="left">
+    </ActionItem>
+    <Label class="action-bar-title" text="Home"></Label>
+</ActionBar>
+
+<GridLayout rows="auto, *" class="page page-content">
+    <Label row="0" text="TEST" textWrap="true"></Label>
+    <RadListView row="1" [items]="items">
+        <ng-template tkListItemTemplate let-item="item">
+            <StackLayout orientation="vertical">
+                <Label class="nameLabel" text="sample item title"></Label>
+                <Label class="descriptionLabel" text="sample item description"></Label>
+            </StackLayout>
+        </ng-template>
+    </RadListView>
+</GridLayout>
