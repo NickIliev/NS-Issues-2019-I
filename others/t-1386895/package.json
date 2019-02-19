@@ -15,11 +15,12 @@
     "dependencies": {
         "nativescript-pager": "^9.3.14",
         "nativescript-theme-core": "~1.0.4",
-        "tns-core-modules": "~5.1.0"
+        "tns-core-modules": "^5.2.0-rc-2019-02-08-145906-02"
     },
     "devDependencies": {
         "nativescript-dev-typescript": "~0.7.0",
-        "nativescript-dev-webpack": "~0.19.0"
+        "nativescript-dev-webpack": "~0.19.0",
+        "tns-platform-declarations": "^5.1.2"
     },
     "gitHead": "9b6565a4513375a33a59c44262dfc1d818a8205e",
     "readme": "NativeScript Application"
