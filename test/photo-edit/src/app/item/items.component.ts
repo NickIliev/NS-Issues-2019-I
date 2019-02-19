@@ -34,8 +34,8 @@ export class ItemsComponent implements OnInit {
         takePicture().then(res => {
             console.log(res);
             this.imageSrc = res;
-        }).catch(err => {
-
+        }).catch(e => {
+            console.error(e);
         })
     }
 
