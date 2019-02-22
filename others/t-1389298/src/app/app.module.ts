@@ -11,6 +11,9 @@ import { ItemDetailComponent } from "./item/item-detail.component";
 
 // Uncomment and add to NgModule imports if you need to use the HttpClient wrapper
 // import { NativeScriptHttpClientModule } from "nativescript-angular/http-client";
+import { registerElement } from 'nativescript-angular/element-registry';
+import { LocalVideo } from 'nativescript-twilio-video';
+registerElement('LocalVideo', () => LocalVideo);
 
 @NgModule({
     bootstrap: [

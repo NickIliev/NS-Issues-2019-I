@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
+import { Page } from "tns-core-modules/ui/page";
 
-import { Item } from "./item";
-import { ItemService } from "./item.service";
+import { LocalVideo, VideoActivity } from "nativescript-twilio-video"; // for testing pupposes 
 
 @Component({
     selector: "ns-items",
@@ -9,15 +9,16 @@ import { ItemService } from "./item.service";
     templateUrl: "./items.component.html"
 })
 export class ItemsComponent implements OnInit {
-    items: Array<Item>;
+    localVideo: LocalVideo;
+    videoActivity: VideoActivity;
 
-    // This pattern makes use of Angular’s dependency injection implementation to
-    // inject an instance of the ItemService service into this class.
-    // Angular knows about this service because it is included in your app’s main NgModule,
-    // defined in app.module.ts.
-    constructor(private itemService: ItemService) { }
+    constructor(private _page: Page) { }
 
     ngOnInit(): void {
-        this.items = this.itemService.getItems();
+    }
+
+    ngAfterViewInit(): void {
+        this.localVideo = this._page.getViewById('local-video');
+        this.videoActivity.localVideoView = this.localVideo.localVideoView;
     }
 }
