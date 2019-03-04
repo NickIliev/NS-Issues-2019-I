@@ -1,0 +1,10 @@
+<ActionBar title="Home" class="action-bar">
+</ActionBar>
+
+
+<StackLayout class="home-panel">
+    <!--Add your page content here-->
+    <Label text="Label"></Label>
+    <Label [text]="element" (tap)="onTap(element)" class="element" width="200" height="40" margin="20"
+        [class.element-active]="element === activeElement" *ngFor="let element of elements" color="blue"></Label>
+</StackLayout>
