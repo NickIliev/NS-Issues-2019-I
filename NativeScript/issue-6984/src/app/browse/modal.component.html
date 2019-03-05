@@ -1,6 +1,5 @@
-<GridLayout #rootLayout rows="*, auto" (showingModally)="onShowingModally($event)" backgroundColor="lightGreen" width="200" height="300"> 
-    <StackLayout verticalAlignment="middle">
-        <Label text="My Modal Page" textWrap="true" class="h3 text-center"></Label>
-        <Button text="Close Modal" automationText="Close Modal" (tap)="close(rootLayout)"></Button>
-    </StackLayout>
+<GridLayout #rootLayout rows="auto, *" (showingModally)="onShowingModally($event)" backgroundColor="lightGreen" width="200" height="300"> 
+
+        <Label row="0" text="My Modal Page" textWrap="true" class="h3 text-center"></Label>
+        <Button row="1" text="Close Modal" automationText="Close Modal" (tap)="close(rootLayout)"></Button>
 </GridLayout>

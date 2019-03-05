@@ -11,7 +11,7 @@ export class ModalComponent {
     }
 
     close(layoutRoot: View) {
-        layoutRoot.closeModal();
+        layoutRoot.closeModal("passed context");
     }
 
     ngOnInit() {
