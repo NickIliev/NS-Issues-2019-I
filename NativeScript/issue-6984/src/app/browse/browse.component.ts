@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewContainerRef } from "@angular/core";
 import { ModalDialogParams, ModalDialogService, ModalDialogOptions } from "nativescript-angular/directives/dialogs";
-import { ModalComponent } from "./modal.component";
+import { ModalComponent } from "../shared/modal.component";
 
 @Component({
     selector: "Browse",
