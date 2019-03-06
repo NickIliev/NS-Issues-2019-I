@@ -1,10 +1,32 @@
-<ActionBar title="Home" class="action-bar">
-</ActionBar>
+<!-- https://docs.nativescript.org/angular/core-concepts/angular-navigation.html#page-router-outlet -->
 
+<GridLayout rows="2*, *" columns="*">
 
-<StackLayout class="home-panel">
-    <!--Add your page content here-->
-    <Label text="Label"></Label>
-    <Label [text]="element" (tap)="onTap(element)" class="element" width="200" height="40" margin="20"
-        [class.element-active]="element === activeElement" *ngFor="let element of elements" color="blue"></Label>
-</StackLayout>
+    <GridLayout row="0" rows="*" columns="*">
+        <!-- <ng-container *ngFor="let element of elements">
+            <Label
+                    [text]="element"
+                    (tap)="setCurrentElement(element)"
+                    class="mat-list-item"
+                    [class.mat-list-item-active]="currentElement === element"
+            ></Label>
+        </ng-container> -->
+        <ListView [items]="elements"  class="list-group">
+            <ng-template let-element="item">
+                <StackLayout>
+                    <Label [text]="element" (tap)="setCurrentElement(element)" class="mat-list-item"
+                        [class.mat-list-item-active]="currentElement === element"></Label>
+                </StackLayout>
+            </ng-template>
+        </ListView>
+    </GridLayout>
+
+    <StackLayout row="1">
+        <ng-container *ngFor="let contentPart of getContentParts(currentElement)">
+            <StackLayout>
+                <Label [text]="contentPart + ' - ' + currentElement"></Label>
+            </StackLayout>
+        </ng-container>
+    </StackLayout>
+
+</GridLayout>

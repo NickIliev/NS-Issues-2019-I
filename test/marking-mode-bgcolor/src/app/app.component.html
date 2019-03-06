@@ -1,0 +1,9 @@
+<StackLayout>
+    <GridLayout [rows]="rows" [columns]="rows">
+        <ng-container *ngFor="let elementsRow of elementsGrid; index as i">
+            <ng-container *ngFor="let element of elementsRow; index as j">
+                <Label [row]="i" [col]="j" text=" " class="mat-list-item" [class.mat-list-item-active]="element"></Label>
+            </ng-container>
+        </ng-container>
+    </GridLayout>
+</StackLayout>

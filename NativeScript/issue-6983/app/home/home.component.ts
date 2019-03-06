@@ -1,25 +1,41 @@
-import { Component, OnInit } from "@angular/core";
+
+
+(<any>global).allElements = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+import {Component} from '@angular/core';
+
+declare let java: any;
 
 @Component({
-    selector: "Home",
+    selector: 'ns-app',
     moduleId: module.id,
-    templateUrl: "./home.component.html",
-    styleUrls: ['./home.component.css']
+    templateUrl: './home.component.html',
+    styles: [`
+        .mat-list-item {
+            background-color: yellow;
+            height: 40;
+            margin: 10;
+        }
+
+        .mat-list-item-active {
+            background-color: red;
+        }
+    `],
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent  {
+    public elements: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 2, 3, 4, 5, 6, 7, 8, 9]; //(<any>global).allElements;
+    public currentElement: number | null = null;
 
-    public activeElement: any | null = null;
-    public elements: Array<any> = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    public setCurrentElement(element: number): void {
+        this.currentElement = element;
 
-    constructor() {
+        setTimeout((): void => {
+            // (<any>global).gc(); //
+            (<any>java).lang.System.gc();
+            console.log('cleared');
+        });
     }
 
-    ngOnInit(): void {
-    }
-
-    onTap(element) {
-        console.log("onTap");
-        
-        this.activeElement = element;
+    public getContentParts(i: number): number[] {
+        return Array.from(Array(1000).keys());
     }
 }
