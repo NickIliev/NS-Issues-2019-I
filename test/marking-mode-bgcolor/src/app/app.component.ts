@@ -1,35 +1,32 @@
 import {Component, OnInit} from '@angular/core';
 
+(<any>global).booleans = [];
+(<any>global).arrays = [];
+(<any>global).indexes = Array.from(Array(21).keys());
+
 @Component({
     selector: 'ns-app',
     moduleId: module.id,
-    templateUrl: './app.component.html',
-    styles: [`
-        .mat-list-item {
-            background-color: #ffffff;
-        }
-
-        .mat-list-item-active {
-            background-color: #ffeeee;
-        }
-    `],
+    templateUrl: './app.component.html'
 })
 export class AppComponent implements OnInit {
     public static readonly MAX = 21;
     public elementsGrid: boolean[][] = [];
     public rows: string = '*,'.repeat(AppComponent.MAX);
 
-    protected indexes = Array.from(Array(AppComponent.MAX).keys());
-
     public constructor() {
         let elementValue = true;
-        for (let i in this.indexes) {
+        for (let i in (<any>global).indexes) {
+            (<any>global).booleans.push(elementValue);
             const elementRow: boolean[] = [];
-            for (let j in this.indexes) {
+            for (let j in (<any>global).indexes) {
                 elementRow.push(elementValue);
                 elementValue = !elementValue;
             }
+
+            (<any>global).arrays.push(elementRow);
             this.elementsGrid.push(elementRow);
+            (<any>global).elementsGrid = this.elementsGrid;
         }
     }
 
@@ -40,9 +37,10 @@ export class AppComponent implements OnInit {
     }
 
     protected update(): void {
-        for (let i in this.indexes) {
-            for (let j in this.indexes) {
+        for (let i in (<any>global).indexes) {
+            for (let j in (<any>global).indexes) {
                 this.elementsGrid[i][j] = !this.elementsGrid[i][j];
+                // console.log(this.elementsGrid[i][j]);
             }
         }
     }

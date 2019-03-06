@@ -1,9 +1,24 @@
 <StackLayout>
     <GridLayout [rows]="rows" [columns]="rows">
+
         <ng-container *ngFor="let elementsRow of elementsGrid; index as i">
             <ng-container *ngFor="let element of elementsRow; index as j">
-                <Label [row]="i" [col]="j" text=" " class="mat-list-item" [class.mat-list-item-active]="element"></Label>
+                <!-- Uncomment the below line to reproduce the issue with markingMode-->
+                <Label [text]="element" ></Label>
+                <Label [row]="i" [col]="j" [text]="element" ></Label>
+                <!-- <Label text="{{ element }}" ></Label> --> <!-- Not working -->
             </ng-container>
         </ng-container>
+
+        <!-- Using Reapeater instaed of ngFor is working without crash -->
+        <!-- <Repeater [items]="elementsGrid">
+            <Repeater.itemTemplate>
+                <Repeater [items]="elementsRow">
+                    <Repeater.itemTemplate>
+                        <Label text="{{ $value }}" margin="10"></Label>
+                    </Repeater.itemTemplate>
+                </Repeater>
+            </Repeater.itemTemplate>
+        </Repeater> -->
     </GridLayout>
 </StackLayout>
