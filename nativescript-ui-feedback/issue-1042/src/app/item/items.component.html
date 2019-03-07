@@ -1,0 +1,19 @@
+
+<ActionBar title="My App" class="action-bar">
+</ActionBar>
+
+<GridLayout class="page">
+    <RadListView [items]="items">
+        <ng-template tkListItemTemplate let-item="item">
+
+            <!-- The app will crash if we don't wrap the custom component in layout [iOS only] -->
+            <GridLayout>
+                <toolbar [item]="item" (toolbar)="onNotify($event)"></toolbar>
+            </GridLayout>
+        </ng-template>
+
+        <!-- App will crash if we use ListViewGridLayout along with custom component (e.g. the toolbar in this case) [iOS only] -->
+        <ListViewGridLayout tkListViewLayout scrollDirection="Vertical" spanCount="2">
+        </ListViewGridLayout>
+    </RadListView>
+</GridLayout>
