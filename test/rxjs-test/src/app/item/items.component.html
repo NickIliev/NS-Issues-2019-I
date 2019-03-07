@@ -1,0 +1,17 @@
+<ActionBar title="My App" class="action-bar">
+</ActionBar>
+
+<GridLayout class="page" >
+    <!-- <ListView [items]="items" class="list-group">
+        <ng-template let-item="item">
+            <Label [nsRouterLink]="['/item', item.id]" (loaded)="onLabelLoaded($event, item.id)" [text]="item.name" class="list-group-item"></Label>
+        </ng-template>
+    </ListView> -->
+    <StackLayout (loaded)="onStackLoaded($event)">
+        <Label text="some label" textWrap="true" class="btn btn-primary m-10 p-10"></Label>
+        <Button text="some button"  class="btn btn-primary m-10 p-10"></Button>
+        <GridLayout rows="*" columns="*" >
+            <Label text="inside the gridf" textWrap="true" class="btn btn-primary m-10 p-10"></Label>
+        </GridLayout>
+    </StackLayout>
+</GridLayout>
