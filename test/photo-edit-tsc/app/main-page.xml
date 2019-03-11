@@ -1,0 +1,14 @@
+
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo" class="page">
+    <Page.actionBar>
+        <ActionBar title="My App" icon="" class="action-bar">
+        </ActionBar>
+    </Page.actionBar>
+
+    <GridLayout rows="auto auto auto *" columns="*" class="page">
+        <TextField row="0" hint="enter text" text=""></TextField>
+        <Button row="1" text="editPhoto" tap="{{ editPhoto }}"></Button>
+        <Button row="2" text="takePhoto" tap="{{ takePhoto }}" ></Button>
+        <Image row="3" loaded="{{ onImageLoaded }}" src="{{ imageSrc }}"></Image>
+    </GridLayout>
+</Page>
