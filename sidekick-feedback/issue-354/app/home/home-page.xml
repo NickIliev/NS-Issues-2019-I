@@ -1,0 +1,14 @@
+<Page loaded="pageLoaded" class="page" xmlns:fl="components/float-label"
+    xmlns="http://www.nativescript.org/tns.xsd">
+    <ActionBar title="Float-Up Labels" class="action-bar"></ActionBar>
+    <GridLayout>
+        <ScrollView>
+            <StackLayout >
+                <fl:FloatLabel id="cisc" placeholder="Username"></fl:FloatLabel>
+                <fl:FloatLabel id="ident" placeholder="ID"></fl:FloatLabel>
+				<Button tap="btn" text="Save"/>
+                <Label text="العربییە" class="kufi"></Label>
+            </StackLayout>
+        </ScrollView>
+    </GridLayout>
+</Page>
