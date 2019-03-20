@@ -1,10 +1,10 @@
 <StackLayout height="100%">
     <ListView #listview [items]="options" separatorColor="white" (itemTap)="onItemTap($event)">
-        <template let-item="item" let-i="index" let-odd="odd" let-even="even">
+        <ng-template let-item="item" let-i="index" let-odd="odd" let-even="even">
             <GridLayout columns="44, *" height="48">
                 <StackLayout colSpan="2" verticalAlignment="bottom" class="line"></StackLayout>
                 <Label col="1" [text]="item" style="font-size:20" [class.active]="selectedOption == item"></Label>
             </GridLayout>
-        </template>
+        </ng-template>
     </ListView>
 </StackLayout>
