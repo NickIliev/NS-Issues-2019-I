@@ -1,0 +1,14 @@
+<Page class="page" navigatingTo="onNavigatingTo"
+    xmlns:lv="nativescript-ui-listview"
+    xmlns="http://schemas.nativescript.org/tns.xsd" >
+
+    <ActionBar class="action-bar">
+        <!-- Should remove the navigation button -->
+        <NavigationButton ios:visibility="collapsed" />
+        <Label class="action-bar-title" text="Browse" horizontalAlignment="center" />
+    </ActionBar>
+
+    <GridLayout rows="auto, (*" class="page-content">
+        <Label row="0" text="test" class="h2 text-center --my-css"></Label>
+    </GridLayout>
+</Page>
