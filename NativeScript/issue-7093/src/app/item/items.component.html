@@ -1,0 +1,13 @@
+
+<ActionBar title="NativeScript" class="action-bar">
+</ActionBar>
+
+<GridLayout row="auto, *" class="page">
+    <Label text="sample" row="0" class="h1 text-center"></Label>
+    <ListView row="1" [items]="items" class="list-group">
+        <ng-template let-item="item">
+            <Label [nsRouterLink]="['/item', item.id]" [text]="item.name"
+                class="list-group-item"></Label>
+        </ng-template>
+    </ListView>
+</GridLayout>
