@@ -1,5 +1,9 @@
 import { Component } from "@angular/core";
-import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { HttpClient, HttpHeaders, HttpErrorResponse } from "@angular/common/http";
+import { throwError } from "rxjs";
+import { catchError } from 'rxjs/operators'; 
+
+import { request } from "tns-core-modules/http";
 
 @Component({
     selector: "ns-app",
@@ -24,6 +28,28 @@ export class AppComponent {
         return this.http.delete(`${this.server}${this.method}`, options);
     }
 
+  
+    coreModulesaReques() {
+        request({
+            url: "https://httpbin.org/delete",
+            method: "DELETE",
+            headers: { "Content-Type": "application/json" },
+            content: JSON.stringify({
+                data: [
+                    {
+                        type: 'sports',
+                        id: 1234
+                    }
+                ]
+            })
+        }).then((response) => {
+            const result = response.content.toJSON();
+            console.log(result)
+        }, (err) => {
+            console.log(err)
+        });
+    }
+
     private createOptions() {
         const DATA = {
             data: [
@@ -35,7 +61,7 @@ export class AppComponent {
         };
 
         const httpOptions = {
-            headers: new HttpHeaders({ 'Content-Type': 'application/json' }), body: DATA
+            headers: new HttpHeaders({ 'Content-Type': 'application/json' }), body: JSON.stringify(DATA)
         };
 
         return httpOptions;
