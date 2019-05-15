@@ -2,10 +2,7 @@
     "nativescript": {
         "id": "org.nativescript.issue6984",
         "tns-android": {
-            "version": "5.2.0"
-        },
-        "tns-ios": {
-            "version": "5.2.0"
+            "version": "5.3.1"
         }
     },
     "description": "NativeScript Application",
@@ -24,11 +21,11 @@
         "@angular/platform-browser": "~7.2.0",
         "@angular/platform-browser-dynamic": "~7.2.0",
         "@angular/router": "~7.2.0",
-        "nativescript-angular": "~7.2.1",
-        "nativescript-theme-core": "~1.0.4",
+        "nativescript-angular": "~7.2.3",
+        "nativescript-theme-core": "~1.0.6",
         "reflect-metadata": "~0.1.12",
         "rxjs": "~6.3.0",
-        "tns-core-modules": "~5.2.0",
+        "tns-core-modules": "~5.3.2",
         "zone.js": "~0.8.26"
     },
     "devDependencies": {
@@ -37,8 +34,8 @@
         "@ngtools/webpack": "~7.2.0",
         "codelyzer": "~4.5.0",
         "nativescript-dev-sass": "~1.6.0",
-        "nativescript-dev-typescript": "~0.8.0",
-        "nativescript-dev-webpack": "~0.20.0",
+        "nativescript-dev-typescript": "~0.9.0",
+        "nativescript-dev-webpack": "~0.21.2",
         "tslint": "~5.11.0"
     },
     "gitHead": "36e279acd3e8bc27395256a32dec1bc9523489ae",
