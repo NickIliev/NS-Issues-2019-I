@@ -30,18 +30,21 @@ export class AppComponent {
 
   
     coreModulesaReques() {
+
+        let DATA = {
+            data: [
+                {
+                    type: 'sports',
+                    id: 1234
+                }
+            ]
+        }
+
         request({
             url: "https://httpbin.org/delete",
             method: "DELETE",
-            headers: { "Content-Type": "application/json" },
-            content: JSON.stringify({
-                data: [
-                    {
-                        type: 'sports',
-                        id: 1234
-                    }
-                ]
-            })
+            headers: { "Content-Type": "application/json", "Content-Length": DATA.data.length },
+            content: JSON.stringify(DATA)
         }).then((response) => {
             const result = response.content.toJSON();
             console.log(result)

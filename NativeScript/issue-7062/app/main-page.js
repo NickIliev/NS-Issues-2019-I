@@ -1,25 +1,26 @@
-
-// relative paths working with and without Webpack
-// const createViewModel = require("./main-view-model").createViewModel;
-
-// absolute paths for module resolution is working only without Webpack
-// crashing with Webpack
-
+let page;
 const appDir = __dirname; // absolute path to the folder
 console.log(`APP DIR ${appDir}`);
-const createViewModel = require(`${appDir}/main-view-model`).createViewModel;
 
 function onNavigatingTo(args) {
+    page = args.object;
+}
+exports.onNavigatingTo = onNavigatingTo;
 
-    const page = args.object;
+function createBindingModel(args) {
+    const path = `./main-view-model`;
+    const createViewModel = require(`./main-view-model`).createViewModel;
 
     page.bindingContext = createViewModel();
 }
+exports.createBindingModel = createBindingModel;
 
-/*
-Exporting a function in a NativeScript code-behind file makes it accessible
-to the file’s corresponding XML file. In this case, exporting the onNavigatingTo
-function here makes the navigatingTo="onNavigatingTo" binding in this page’s XML
-file work.
-*/
-exports.onNavigatingTo = onNavigatingTo;
+function loadInContext(filename) { 
+    return new Promise(function(resolve){
+        require(['./'+filename], resolve);
+    })
+}
+
+function loadModules(namesInContext){
+    return Promise.all(namesInContext.map(loadInContext));
+}
