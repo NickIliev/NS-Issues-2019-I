@@ -1,0 +1,21 @@
+
+@import '~nativescript-theme-core/css/core.light.css';
+
+.fa {
+font-family: "Font Awesome 5 Pro", fa-regular-400;
+font-weight: 400;
+}
+
+.fa-free {
+font-family: "FontAwesome", fontawesome-webfont-free;
+}
+
+.ion {
+font-family: "Ionicons", ionicons;
+}
+
+Label {
+    font-size: 24;
+    color: red;
+    padding: 10;
+}
