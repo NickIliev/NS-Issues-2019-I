@@ -8,7 +8,7 @@ export class HelloWorldModel extends Observable {
     constructor() {
         super();
 
-        this.res = android.R;
+        // this.res = android.R;
     }
 
     get message(): string {
