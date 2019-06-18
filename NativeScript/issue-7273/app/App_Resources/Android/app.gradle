@@ -1,9 +1,9 @@
 // Add your native dependencies here:
 
 // Uncomment to add recyclerview-v7 dependency
-dependencies {
-	implementation 'com.irozon.sneaker:sneaker:2.0.0'
-}
+//dependencies {
+//	implementation 'com.android.support:recyclerview-v7:+'
+//}
 
 // If you want to add something to be applied before applying plugins' include.gradle files
 // e.g. project.ext.googlePlayServicesVersion = "15.0.1"

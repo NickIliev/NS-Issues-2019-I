@@ -1,14 +1,26 @@
 import { Observable } from "tns-core-modules/data/observable";
 
+declare let android: any;
+declare let com: any;
+
+import * as application from "tns-core-modules/application";
+
 export class HelloWorldModel extends Observable {
 
     private _message: string;
     res: any;
+    sneaker: any;
 
     constructor() {
         super();
 
+        let activity = application.android.currentContext;
+
         // this.res = android.R;
+        com.irozon.sneaker.Sneaker.with(activity) // Activity, Fragment or ViewGroup
+        .setTitle("Success!!")
+        .setMessage("This is the success message")
+        .sneakSuccess()
     }
 
     get message(): string {
