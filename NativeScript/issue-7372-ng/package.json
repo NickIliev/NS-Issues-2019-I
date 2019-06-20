@@ -1,0 +1,58 @@
+{
+  "nativescript": {
+    "id": "org.nativescript.curiosity",
+    "tns-android": {
+      "version": "5.4.0"
+    },
+    "tns-ios": {
+      "version": "5.4.2"
+    }
+  },
+  "description": "NativeScript Application",
+  "license": "SEE LICENSE IN <your-license-filename>",
+  "repository": "<fill-your-repository-here>",
+  "dependencies": {
+    "@angular/animations": "~8.0.0",
+    "@angular/common": "~8.0.0",
+    "@angular/compiler": "~8.0.0",
+    "@angular/core": "~8.0.0",
+    "@angular/forms": "~8.0.0",
+    "@angular/http": "~8.0.0-beta.10",
+    "@angular/platform-browser": "~8.0.0",
+    "@angular/platform-browser-dynamic": "~8.0.0",
+    "@angular/router": "~8.0.0",
+    "@localization/l10n": "^2.1.7",
+    "@nstudio/nativescript-camera-plus": "^2.2.0",
+    "@teammaestro/nativescript-svg": "^1.0.1",
+    "lodash": "^4.17.11",
+    "nativescript-angular": "^8.0.1",
+    "nativescript-checkbox": "^3.0.3",
+    "nativescript-facebook": "^4.1.0",
+    "nativescript-fcuuid": "^1.0.2",
+    "nativescript-iqkeyboardmanager": "^1.5.1",
+    "nativescript-localstorage": "^2.0.0",
+    "nativescript-mixpanel": "^2.0.2",
+    "nativescript-ngx-shadow": "^6.5.0",
+    "nativescript-ngx-slides": "^6.1.0",
+    "nativescript-orientation": "^2.2.1",
+    "nativescript-pedometer": "^2.1.0",
+    "nativescript-plugin-firebase": "^9.0.1",
+    "nativescript-speech-recognition": "^1.4.1",
+    "nativescript-theme-core": "~1.0.4",
+    "nativescript-toasty": "^2.0.0",
+    "nativescript-ui-gauge": "^4.0.0",
+    "nativescript-ui-sidedrawer": "^6.0.0",
+    "reflect-metadata": "~0.1.12",
+    "rxjs": "~6.5.0",
+    "tns-core-modules": "~5.4.0",
+    "zone.js": "~0.9.1"
+  },
+  "devDependencies": {
+    "@angular/compiler-cli": "~8.0.0",
+    "@ngtools/webpack": "~8.0.0",
+    "nativescript-dev-typescript": "~0.10.0",
+    "nativescript-dev-webpack": "~0.24.0"
+  },
+  "gitHead": "8c1a4866a66daab09bf5ef8e5a96472687192373",
+  "readme": "NativeScript Application"
+}
