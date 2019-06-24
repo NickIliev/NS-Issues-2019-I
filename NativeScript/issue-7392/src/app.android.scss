@@ -10,5 +10,11 @@
 
 // Place any CSS rules you want to apply only on Android here
 .cell {
-    background-color: red;
+    background-color: blue;
+    font-size: 24;
+    color: white;
+}
+
+.--my-custom {
+    color: bisque;
 }
