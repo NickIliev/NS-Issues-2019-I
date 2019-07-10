@@ -1,0 +1,25 @@
+{
+  "nativescript": {
+    "id": "org.nativescript.issue7475",
+    "tns-android": {
+      "version": "6.0.0-2019-06-11-172137-01"
+    },
+    "tns-ios": {
+      "version": "6.0.0-2019-06-10-154118-03"
+    }
+  },
+  "main": "app.js",
+  "description": "NativeScript Application",
+  "license": "SEE LICENSE IN <your-license-filename>",
+  "repository": "<fill-your-repository-here>",
+  "dependencies": {
+    "nativescript-theme-core": "~1.0.4",
+    "tns-core-modules": "6.0.0-next-2019-06-20-155941-01"
+  },
+  "devDependencies": {
+    "nativescript-dev-webpack": "0.25.0-next-2019-06-21-150426-03",
+    "typescript": "3.4.1"
+  },
+  "gitHead": "8c1a4866a66daab09bf5ef8e5a96472687192373",
+  "readme": "NativeScript Application"
+}
