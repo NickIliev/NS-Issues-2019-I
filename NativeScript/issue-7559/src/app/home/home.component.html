@@ -16,6 +16,8 @@
 </ActionBar>
 
 <StackLayout class="page page-content">
-    <Label text="Label Nav to search page (slow)" (tap)="navigateToHome()" class="btn btn-primary"></Label>
+    <Label text="Label Nav to search page (fast)" (tap)="navigateToHome()" class="btn btn-primary"></Label>
     <Button text="Button Nav to search page  (fast)" (tap)="navigateToHome()" class="btn btn-primary"></Button>
+
+    <Label text="navigate via nsRouterLink (slow !?)" [nsRouterLink]="['/search']" class="btn btn-primary"></Label>
 </StackLayout>

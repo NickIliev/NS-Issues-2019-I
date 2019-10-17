@@ -9,7 +9,8 @@ import * as app from "tns-core-modules/application";
     styleUrls: ["./home.component.scss"]
 })
 export class HomeComponent implements OnInit {
-
+    omy: number = 2;
+    
     constructor() {
         // Use the component constructor to inject providers.
     }
