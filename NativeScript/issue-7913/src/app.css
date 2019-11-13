@@ -28,7 +28,11 @@ refer to http://docs.nativescript.org/ui/theme.
 
 .mat {
     font-family: "MaterialIcons-Regular", "Material Icons";
-    font-size: 40; /* This will be ignored for the Image icon of TabStripItem */
+    font-size: 40; 
+}
+
+TabStripItem.tabstripitem {
+    color: blue;
 }
 
 TabStripItem.tabstripitem:active {
