@@ -1,0 +1,10 @@
+
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+
+    <ActionBar title="My App" icon=""></ActionBar>
+
+
+    <GridLayout>
+        <WebView src="https://docs.nativescript.org" loaded="onWebViewLoaded"></WebView>
+    </GridLayout>
+</Page>
