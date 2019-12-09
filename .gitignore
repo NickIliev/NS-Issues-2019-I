@@ -16,9 +16,6 @@ yarn-error.log*
 node_modules/
 hooks/
 
-# TypeScript v1 declaration files
-typings/
-
 # Optional npm cache directory
 .npm
 
