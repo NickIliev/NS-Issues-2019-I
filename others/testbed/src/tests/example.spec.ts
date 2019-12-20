@@ -16,7 +16,7 @@ export class ZonedRenderer {
 describe('Renderer E2E', () => {
   beforeEach(nsTestBedBeforeEach([ZonedRenderer]));
   afterEach(nsTestBedAfterEach(false));
-  it('executes events inside NgZone when listen is called outside NgZone', async(() => {
+  it('frame topmost test', async(() => {
 
     console.log(`>>>>>>>>>>>>>>>>>>>>>>> frameModule.topmost(): ${frameModule.topmost()}`);
     console.log(`>>>>>>>>>>>>>>>>>>>>>>> frameModule.Frame.topmost(): ${frameModule.Frame.topmost()}`);
