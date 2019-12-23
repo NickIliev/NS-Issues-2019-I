@@ -1,0 +1,15 @@
+<ActionBar title="My App" class="action-bar">
+    <GridLayout rows="*" columns="*">
+        <Button text="toggleDrawer" (tap)="toggleDrawer()"></Button>
+        
+    </GridLayout>
+</ActionBar>
+
+<GridLayout class="page">
+    <ListView [items]="items" class="list-group">
+        <ng-template let-item="item">
+            <Label [nsRouterLink]="['item', item.id]" [text]="item.name"
+                class="list-group-item"></Label>
+        </ng-template>
+    </ListView>
+</GridLayout>

@@ -9,11 +9,11 @@ export function navigatingTo(args: EventData) {
     const page = <Page>args.object;
     page.bindingContext = new HelloWorldModel();
 
-    requestPermissions(["android.permission.CALL_PHONE"]).then(() => {
-        console.log(`Permissionsgranted!`);
-    }).catch(err => {
-        console.log(`Permissions fdenied - time for plan B!`);
-    })
+requestPermissions(["android.permission.CALL_PHONE"]).then(() => {
+    console.log(`Permissionsgranted!`);
+}).catch(err => {
+    console.log(`Permissions fdenied - time for plan B!`);
+})
 }
 
 export function makeCall() {
