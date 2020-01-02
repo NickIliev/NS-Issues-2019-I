@@ -1,0 +1,24 @@
+<ActionBar title="Home">
+</ActionBar>
+
+<GridLayout>
+    <!-- <ListView [items]="countries" (itemTap)="onItemTap($event)">
+        <ng-template let-item="item">
+            <GridLayout rows="150" columns="150">
+                <Image [src]="item.imageSrc"
+                    class="thumb img-circle" stretch="aspectFill">
+                </Image>
+            </GridLayout>
+        </ng-template>
+    </ListView> -->
+
+    <RadListView [items]="countries">
+        <ng-template tkListItemTemplate let-item="item">
+            <GridLayout rows="auto, *, auto" columns="auto, *, auto">
+                <Image ow="0" col="0" colSpan="3"  [src]="item.imageSrc"
+                    class="thumb img-circle" stretch="aspectFill">
+                </Image>
+            </GridLayout>
+        </ng-template>
+    </RadListView>
+</GridLayout>

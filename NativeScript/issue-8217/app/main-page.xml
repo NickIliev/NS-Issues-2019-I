@@ -1,0 +1,11 @@
+
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+
+    <ActionBar title="My App" icon=""></ActionBar>
+
+    <StackLayout class="p-20">
+        <Image src="https://www.pngitem.com/pimgs/m/185-1850003_sample-png-transparent-png.png" 
+        stretch="aspectFill" width="200" decodeWidth="200" 
+        loadMode="async" useCache="true"></Image>
+    </StackLayout>
+</Page>
