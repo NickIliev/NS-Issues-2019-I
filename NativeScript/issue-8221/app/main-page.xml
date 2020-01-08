@@ -1,0 +1,8 @@
+
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+
+    <GridLayout rows="*, *">
+        <TextField row="0" text="" hint="enter text" autocorrect="true" loaded="onTextFieldLoaded"></TextField>
+        <Label row="1" text="more content here ..."></Label>
+    </GridLayout>
+</Page>
