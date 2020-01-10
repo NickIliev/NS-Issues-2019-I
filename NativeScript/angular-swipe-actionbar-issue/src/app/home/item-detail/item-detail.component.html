@@ -1,0 +1,7 @@
+<home-actionbar color="red" [title]="item.name">
+    <NavigationButton (tap)="onBackTap()" android.systemIcon="ic_menu_back"></NavigationButton>
+</home-actionbar>
+
+<GridLayout>
+    <Label class="m-10 h3" verticalAlignment="top" [text]="item.description"></Label>
+</GridLayout>
