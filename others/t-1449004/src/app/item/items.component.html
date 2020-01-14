@@ -6,7 +6,7 @@
     <Label text="GO TO SUB PAGE" [nsRouterLink]="['/sub']" textWrap="true"></Label>
     
     <RadCalendar row="1"
-    #radCalendar
+    #radCalendar (loaded)="onCalendarLoaded($event)"
     class="date-picker__calendar"
     (dateSelected)="onDateSelected($event)"
     [selectedDate]="date"

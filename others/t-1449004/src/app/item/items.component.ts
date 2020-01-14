@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild, EventEmitter, Input, Output } from "@angular/core";
 import { RadCalendarComponent } from "nativescript-ui-calendar/angular";
-import { CalendarMonthViewStyle, CalendarSelectionEventData, CalendarSelectionShape, CalendarCellAlignment, CalendarFontStyle, DayCellStyle } from "nativescript-ui-calendar";
+import { CalendarMonthViewStyle, CalendarSelectionEventData, CalendarSelectionShape, CalendarCellAlignment, CalendarFontStyle, DayCellStyle, RadCalendar } from "nativescript-ui-calendar";
 import { Color } from "tns-core-modules/color";
 import { isAndroid } from "tns-core-modules/platform";
 
@@ -12,11 +12,26 @@ export class ItemsComponent implements OnInit {
     maxDate: any = new Date();
 
     @ViewChild('radCalendar', {static: false}) public radCalendar: RadCalendarComponent;
-    @Input() public date: Date = new Date();
+    
+    @Input() public date: Date = new Date(2020, 0, 26, 12);
     @Output() public dateChange: EventEmitter<Date> = new EventEmitter();
     public monthStyle: CalendarMonthViewStyle;
   
     private initialized: boolean = false;
+
+    onCalendarLoaded(args) {
+      let calender = args.object as RadCalendar;
+
+      /* Date tests on Android */
+      // let dt = new Date(2020, 0, 26); // not working (for 26th of January only!!??)
+      // let dt = new Date("January 276, 2020 12:00:00") // working OK
+      // let dt = new Date(2020, 0, 26, 12) // working OK
+
+      let str = this.date.toLocaleDateString(); // using toLocalDateString so that the date would be converted properly on Android
+      let dt = new Date(str);
+
+      calender.selectedDate = dt;
+    }
   
     public constructor() {
       this.maxDate.setFullYear(this.maxDate.getFullYear() + 1);
