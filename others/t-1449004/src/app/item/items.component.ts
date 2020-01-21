@@ -19,19 +19,19 @@ export class ItemsComponent implements OnInit {
   
     private initialized: boolean = false;
 
-    onCalendarLoaded(args) {
-      let calender = args.object as RadCalendar;
+  onCalendarLoaded(args) {
+    let calender = args.object as RadCalendar;
 
-      /* Date tests on Android */
-      // let dt = new Date(2020, 0, 26); // not working (for 26th of January only!!??)
-      // let dt = new Date("January 276, 2020 12:00:00") // working OK
-      // let dt = new Date(2020, 0, 26, 12) // working OK
+    /* Date tests on Android */
+    // let dt = new Date(2020, 0, 26); // not working (for 26th of January only!!??)
+    // let dt = new Date("January 276, 2020 12:00:00") // working OK
+    // let dt = new Date(2020, 0, 26, 12) // working OK
 
-      let str = this.date.toLocaleDateString(); // using toLocalDateString so that the date would be converted properly on Android
-      let dt = new Date(str);
+    let str = this.date.toLocaleDateString(); // using toLocalDateString so that the date would be converted properly on Android
+    let dt = new Date(str);
 
-      calender.selectedDate = dt;
-    }
+    calender.selectedDate = dt;
+  }
   
     public constructor() {
       this.maxDate.setFullYear(this.maxDate.getFullYear() + 1);
