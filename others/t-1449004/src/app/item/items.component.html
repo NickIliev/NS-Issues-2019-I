@@ -1,14 +1,11 @@
 
-<ActionBar title="My App">
+<ActionBar title="Test with Calendar Modal Page">
 </ActionBar>
 
-<GridLayout rows="auto, *">
-    <Label text="GO TO SUB PAGE" [nsRouterLink]="['/sub']" textWrap="true"></Label>
+<GridLayout rows="*, *">
+    <!-- <Label text="GO TO SUB PAGE" [nsRouterLink]="['/sub']" textWrap="true"></Label> -->
+    <Button row="0" text="Open Calendar Modal" (tap)="openModal()" class="h2" margin="20"></Button>
+    <Label row="1" [text]="selectedDateResult" textWrap="true" class="h2"></Label>
     
-    <RadCalendar row="1"
-    #radCalendar (loaded)="onCalendarLoaded($event)"
-    class="date-picker__calendar"
-    (dateSelected)="onDateSelected($event)"
-    [selectedDate]="date"
-    [monthViewStyle]="monthStyle"></RadCalendar>
 </GridLayout>
+<!-- (dateSelected)="onDateSelected($event)" -->

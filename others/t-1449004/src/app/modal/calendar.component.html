@@ -1,0 +1,11 @@
+<GridLayout rows="auto, *, 100">
+
+    <RadCalendar row="1" #radCalendar class="date-picker__calendar"
+                (loaded)="onCalendarLoaded($event)"
+                [selectedDate]="date"
+                [monthViewStyle]="monthStyle">
+    </RadCalendar>
+
+    <Button  row="2" text="Close Modal" (tap)="onClose()"></Button>
+</GridLayout>
+<!-- (dateSelected)="onDateSelected($event)" -->

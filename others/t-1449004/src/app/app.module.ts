@@ -5,6 +5,7 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { ItemsComponent } from "./item/items.component";
 import { SubComponent } from "./item/sub.component";
+import { CalendarModalComponent } from "./modal/calendar.component";
 
 import { NativeScriptUICalendarModule } from "nativescript-ui-calendar/angular";
 // Uncomment and add to NgModule imports if you need to use two-way binding
@@ -23,9 +24,10 @@ import { NativeScriptUICalendarModule } from "nativescript-ui-calendar/angular";
         NativeScriptUICalendarModule
     ],
     declarations: [
-        AppComponent,
+        AppComponent, CalendarModalComponent,
         ItemsComponent, SubComponent
     ],
+    entryComponents: [CalendarModalComponent],
     providers: [],
     schemas: [
         NO_ERRORS_SCHEMA
